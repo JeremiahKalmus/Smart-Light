@@ -1,0 +1,37 @@
+<?php
+echo nl2br("ECEGR4910 Smart Light Control \n\n LED Status: ");
+
+exec("gpio read 2", $_GET["Ena);
+if ($status[0] == "1" || Enable = enable ){
+  echo "ON";
+}else if ($status[0] == "0"){
+ echo "OFF";
+}
+
+?>
+
+
+<br/>
+<br/>
+<form method = "get" action = "photoresistorLed.php" >
+Auto LED Brightness Adjustment:  
+<input type = "submit" value = "Enable" name = "enable"> 
+<input type = "submit" value = "Disable" name = "disable"> 
+<br/> 
+</form>
+
+
+<form action = "setupgpio.php">
+Manual Control:
+  <input type = "submit" value = "Enable Manual Control">
+</form>
+
+<form method = "POST" action = "changegpio.php" >
+LED:  
+<input type = "radio" name = "gpio2" value = "1"> On  
+<input type = "radio" name = "gpio2" value = "0" > Off 
+
+<input type = "submit" > 
+</form>
+
+
